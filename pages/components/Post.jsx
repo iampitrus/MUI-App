@@ -16,9 +16,9 @@ import {
   IconButton,
 } from "@mui/material";
 
-function Post() {
+function Post({ src, postText }) {
   return (
-    <Card>
+    <Card sx={{ marginBottom: 5 }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
@@ -30,20 +30,13 @@ function Post() {
             <MoreVert />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        title="Ogbonnaya Peter"
+        subheader="January 14, 2023"
       />
-      <CardMedia
-        component="img"
-        height="20%"
-        image="/ggmu.jpg"
-        alt="Paella dish"
-      />
+      <CardMedia component="img" height="20%" image={src} alt="Paella dish" />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the
-          mussels, if you like.
+          {postText}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
