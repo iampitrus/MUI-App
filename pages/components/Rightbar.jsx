@@ -1,4 +1,5 @@
 import React from "react";
+import { avatarList, itemData } from "../../data";
 
 import {
   Avatar,
@@ -15,53 +16,9 @@ import {
 } from "@mui/material";
 
 function Rightbar() {
-  const itemData = [
-    {
-      img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
-      title: "Breakfast",
-    },
-    {
-      img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
-      title: "Burger",
-    },
-    {
-      img: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
-      title: "Camera",
-    },
-  ];
-
-  const avatarList = [
-    {
-      img: {
-        src: "/sia.jpg",
-        alt: "Remy Sharp",
-      },
-      primary: "Brunch this weekend?",
-      primaryText: "Ali Connors",
-      message: " — I'll be in your neighborhood doing errands this…",
-    },
-    {
-      img: {
-        src: "/elon.jpg",
-        alt: "Travis Howard",
-      },
-      primary: "Summer BBQ",
-      primaryText: "to Scott, Alex, Jennifer",
-      message: "— Wish I could come, but I'm out of town this…",
-    },
-    {
-      img: {
-        src: "/lion.jpg",
-        alt: "Cindy Baker",
-      },
-      primary: "Oui Oui",
-      primaryText: "Sandra Adams",
-      message: "— Do you have Paris recommendations? Have you ever…",
-    },
-  ];
   return (
     <Box flex={2} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
-      <Box position={"fixed"} width={300}>
+      <Box position={"fixed"} width={300} overflow={"auto"}>
         <Typography variant="h6" fontWeight={100}>
           Online Friends
         </Typography>

@@ -16,7 +16,7 @@ import {
   IconButton,
 } from "@mui/material";
 
-function Post({ src, postText }) {
+function Post({ src, postText, author, date }) {
   return (
     <Card sx={{ marginBottom: 5 }}>
       <CardHeader
@@ -30,8 +30,8 @@ function Post({ src, postText }) {
             <MoreVert />
           </IconButton>
         }
-        title="Ogbonnaya Peter"
-        subheader="January 14, 2023"
+        title={author}
+        subheader={date}
       />
       <CardMedia component="img" height="20%" image={src} alt="Paella dish" />
       <CardContent>
